@@ -1,18 +1,23 @@
 
 package org.team484.blu.robot;
 
+import edu.wpi.first.wpilibj.AnalogInput;
 import edu.wpi.first.wpilibj.IterativeRobot;
+import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 
 import org.team484.blu.robot.commands.ExampleCommand;
+import org.team484.blu.robot.subsystems.DriveSub;
 import org.team484.blu.robot.subsystems.ExampleSubsystem;
 
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
+	public static final DriveSub driveSub = new DriveSub();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -21,9 +26,28 @@ public class Robot extends IterativeRobot {
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
      */
+    
+    //Joysticks ==================================
     public static final Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
     public static final Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
     public static final Joystick shootStick = new Joystick(RobotMap.shootStick);
+    //=============================================
+    
+    //Jaguar speed controllers ====================
+    public static final Jaguar frontLeftJaguar = new Jaguar(RobotMap.frontLeftMotor);
+    public static final Jaguar rearLeftJaguar = new Jaguar(RobotMap.rearLeftMotor);
+    public static final Jaguar frontRightJaguar = new Jaguar(RobotMap.frontRightMotor);
+    public static final Jaguar rearRightJaguar = new Jaguar(RobotMap.rearRightMotor);
+    //=============================================
+    
+    //Drive system ================================
+    public static final RobotDrive drive = new RobotDrive(frontLeftJaguar, rearLeftJaguar, frontRightJaguar, rearRightJaguar);
+    //=============================================
+    
+    //Analog inputs ===============================
+    public static final AnalogInput leftIR = new AnalogInput(RobotMap.analogIRLeft);
+    public static final AnalogInput rightIR = new AnalogInput(RobotMap.analogIRRight);
+    //=============================================
     
     public void robotInit() {
 		oi = new OI();
