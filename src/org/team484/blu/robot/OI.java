@@ -3,7 +3,8 @@ package org.team484.blu.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
-
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
@@ -15,7 +16,7 @@ public class OI {
 	Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
     Joystick shootStick = new Joystick(RobotMap.shootStick);
     
-    //Accessors for left joystick posisition
+    //Accessors for left joystick position
     //================================================
     public double getDriveXLeft() {
         return driveStickLeft.getX();
@@ -46,5 +47,10 @@ public class OI {
         return driveStickRight.getTrigger();
     }
     //================================================
+    
+    //Button definitions
+    
+    //Button lowerArm = new JoystickButton(shootStick, RobotMap.lowerArm);
+    //Button raiseArm = new JoystickButton(shootStick, RobotMap.raiseArm);
 }
 

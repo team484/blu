@@ -38,6 +38,11 @@ public class Robot extends IterativeRobot {
     public static final Jaguar rearLeftJaguar = new Jaguar(RobotMap.rearLeftMotor);
     public static final Jaguar frontRightJaguar = new Jaguar(RobotMap.frontRightMotor);
     public static final Jaguar rearRightJaguar = new Jaguar(RobotMap.rearRightMotor);
+    
+    //In case an arm is added
+    
+    //public static final Jaguar armJaguarOne = new Jaguar(RobotMap.armMotorOne);
+    //public static final Jaguar armJaguarTwo = new Jaguar(RobotMap.armMotorTwo);
     //=============================================
     
     //Drive system ================================

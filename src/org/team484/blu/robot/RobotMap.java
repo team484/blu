@@ -21,6 +21,10 @@ public class RobotMap {
 	public static int rearLeftMotor = 1;
 	public static int frontRightMotor = 2;
 	public static int rearRightMotor = 3;
+	
+	public static int armMotorOne = 4;
+	public static int armMotorTwo = 6;
+	
 	//=============================================
 	
 	//Define IR ports ====================================
@@ -33,5 +37,10 @@ public class RobotMap {
 	public static int driveStickLeft = 0;
 	public static int driveStickRight = 0;
 	//=============================================
+	
+	//Button Mapping ================================
+	//public static final int lowerArm = 7; //Raise arm?
+    //public static final int raiseArm = 6; //Lower arm?
+    //=============================================
 	
 }
