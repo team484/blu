@@ -5,20 +5,25 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.vision.USBCamera;
+import edu.wpi.first.wpilibj.vision.USBCamera.WhiteBalance;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-   
-	//Initialize two joysticks
-	Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
-	Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
-    Joystick shootStick = new Joystick(RobotMap.shootStick);
-    
     //Accessors for left joystick position
-    //================================================
-    public double getDriveXLeft() {
+    
+	
+	
+	//Joysticks ==================================
+    //public static final Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
+    //public static final Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
+    //public static final Joystick shootStick = new Joystick(RobotMap.shootStick);
+	//================================================
+    /*
+	public double getDriveXLeft() {
         return driveStickLeft.getX();
     }
     public double getDriveZLeft() {
@@ -46,6 +51,7 @@ public class OI {
     public boolean getDriveTriggerRight() {
         return driveStickRight.getTrigger();
     }
+    */
     //================================================
     
     //Button definitions

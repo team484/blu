@@ -9,10 +9,12 @@ import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
+import edu.wpi.first.wpilibj.vision.USBCamera;
 
 import org.team484.blu.robot.commands.ExampleCommand;
 import org.team484.blu.robot.subsystems.DriveSub;
 import org.team484.blu.robot.subsystems.ExampleSubsystem;
+
 
 public class Robot extends IterativeRobot {
 
@@ -25,7 +27,10 @@ public class Robot extends IterativeRobot {
     /**
      * This function is run when the robot is first started up and should be
      * used for any initialization code.
-     */
+     */  
+    //Initialize Camera ==========================
+    USBCamera logitechCamera = new USBCamera(RobotMap.logitechCamera);
+    //============================================
     
     //Joysticks ==================================
     public static final Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
@@ -38,6 +43,7 @@ public class Robot extends IterativeRobot {
     public static final Jaguar rearLeftJaguar = new Jaguar(RobotMap.rearLeftMotor);
     public static final Jaguar frontRightJaguar = new Jaguar(RobotMap.frontRightMotor);
     public static final Jaguar rearRightJaguar = new Jaguar(RobotMap.rearRightMotor);
+    //=============================================
     
     //In case an arm is added
     
@@ -56,6 +62,7 @@ public class Robot extends IterativeRobot {
     
     public void robotInit() {
 		oi = new OI();
+		openCamera();
         // instantiate the command used for the autonomous period
         autonomousCommand = new ExampleCommand();
     }
