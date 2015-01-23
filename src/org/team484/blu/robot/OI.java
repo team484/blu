@@ -13,16 +13,17 @@ import edu.wpi.first.wpilibj.vision.USBCamera.WhiteBalance;
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
-    //Accessors for left joystick position
     
-	
-	
+    
 	//Joysticks ==================================
     //public static final Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
     //public static final Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
     //public static final Joystick shootStick = new Joystick(RobotMap.shootStick);
 	//================================================
-    /*
+    
+	//Accessors for left joystick position
+	
+	/*
 	public double getDriveXLeft() {
         return driveStickLeft.getX();
     }

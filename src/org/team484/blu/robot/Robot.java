@@ -21,6 +21,7 @@ import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.RobotDrive;
+import edu.wpi.first.wpilibj.Talon;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -29,16 +30,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.vision.USBCamera;
 import edu.wpi.first.wpilibj.image.BinaryImage;
 import edu.wpi.first.wpilibj.image.ColorImage;
+import edu.wpi.first.wpilibj.Relay;
 
 import org.team484.blu.robot.commands.ExampleCommand;
 import org.team484.blu.robot.subsystems.DriveSub;
 import org.team484.blu.robot.subsystems.ExampleSubsystem;
+import org.team484.blu.robot.subsystems.LiftSub;
 
 
 public class Robot extends IterativeRobot {
 
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final DriveSub driveSub = new DriveSub();
+	public static final LiftSub liftSub = new LiftSub();
 	public static OI oi;
 
     Command autonomousCommand;
@@ -64,6 +68,10 @@ public class Robot extends IterativeRobot {
     public static final Jaguar rearRightJaguar = new Jaguar(RobotMap.rearRightMotor);
     //=============================================
     
+    //Talon speed controllers =====================
+    public static final Talon liftMotor = new Talon(RobotMap.liftMotor);
+    //=============================================
+    
     //In case an arm is added
     
     //public static final Jaguar armJaguarOne = new Jaguar(RobotMap.armMotorOne);
@@ -79,6 +87,7 @@ public class Robot extends IterativeRobot {
     public static final AnalogInput rightIR = new AnalogInput(RobotMap.analogIRRight);
     //=============================================
     
+
     // Camera Server
     public static CameraServer server;
     //the camera name (ex "cam0") can be found through the roborio web interface
