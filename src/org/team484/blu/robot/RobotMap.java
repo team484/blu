@@ -16,10 +16,6 @@ public class RobotMap {
     // public static int rangefinderPort = 1;
     // public static int rangefinderModule = 1;
 	
-	//Define camera USB port ============================
-	public static int logitechCamera = 0;
-	//===================================================
-	
 	//Define motor ports =================================
 	public static int frontLeftMotor = 0;
 	public static int rearLeftMotor = 1;
