@@ -1,6 +1,9 @@
 
 package org.team484.blu.robot;
 
+import org.team484.blu.robot.commands.LiftUp;
+import org.team484.blu.robot.subsystems.LiftSub;
+
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
@@ -14,7 +17,12 @@ import edu.wpi.first.wpilibj.vision.USBCamera.WhiteBalance;
  */
 public class OI {
     
-    
+	 Button lowerArm = new JoystickButton(Robot.shootStick, RobotMap.lowerArm);
+	 Button raiseArm = new JoystickButton(Robot.shootStick, RobotMap.raiseArm);
+	
+	 public OI() {
+	    
+	 }
 	//Joysticks ==================================
     //public static final Joystick driveStickLeft = new Joystick(RobotMap.driveStickLeft);
     //public static final Joystick driveStickRight = new Joystick(RobotMap.driveStickRight);
@@ -57,7 +65,6 @@ public class OI {
     
     //Button definitions
     
-    //Button lowerArm = new JoystickButton(shootStick, RobotMap.lowerArm);
-    //Button raiseArm = new JoystickButton(shootStick, RobotMap.raiseArm);
+   
 }
 

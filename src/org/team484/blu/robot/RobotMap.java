@@ -1,4 +1,7 @@
 package org.team484.blu.robot;
+
+import edu.wpi.first.wpilibj.GenericHID;
+
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -30,15 +33,15 @@ public class RobotMap {
 	//========================================s===========
 	
 	//Define joystick ports =============================
-	public static int shootStick = 0;
-	public static int driveStickLeft = 0;
-	public static int driveStickRight = 0;
+	public static final int shootStick = 0;
+	public static final int driveStickLeft = 1;
+	public static final int driveStickRight = 2;
 	//===================================================
 	
 	
 	//Button Mapping ================================
-	//public static final int lowerArm = 7; //Raise arm?
-    //public static final int raiseArm = 6; //Lower arm?
+	public static final int lowerArm = 7; //Raise arm?
+    public static final int raiseArm = 6; //Lower arm?
     //=============================================
 	
 }
